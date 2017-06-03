@@ -1,0 +1,1 @@
+A simple java application to experiment with OpenShift.
