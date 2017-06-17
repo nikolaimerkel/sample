@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
+import java.util.Random;
 
 @RestController
 public class GreetingController {
@@ -26,7 +27,7 @@ public class GreetingController {
     @PostConstruct
     public void init() {
         Greeting greeting = new Greeting();
-        greeting.setMessage("Hello World!!");
+        greeting.setMessage("Hello World: " + new Random().nextInt());
         greetingService.addGreeting(greeting);
     }
 }
